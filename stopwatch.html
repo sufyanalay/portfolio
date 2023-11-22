@@ -1,0 +1,71 @@
+<html>
+<head>
+</head>
+<title>
+PORTFOLIO_WEBSITE
+</title>
+<link rel="stylesheet" href="assignment11.css">
+<body>
+<div class="container">
+   <div class="sidebar">
+      <nav>
+         <ul>
+           <li><a href="/HOME.html"target=-blank> HOME</a></li>
+           <li> <a href="digitalclock.html"target=-blank>DIGITAL CLOCK</a></li>
+           <li><a href="colorgenerator.html"target=-blank>RANDOM COLOR GENERATOR</a></li>
+           <li> <a href="stopwatch.html"target=-blank>STOP WATCH</a></li>
+           <li><a href="blog.htmml"target=-blank>BLOG</a> </li>
+           <li> <a href="contact.html"target=-blank>CONTACT</a></li>
+           <li><a href="https://coursecs.wordpress.com"target=-blank>INSTA</a> </li>
+         </ul>
+     </nav>
+   </div>
+  <div class="stopwatch">
+    <h1 id="displayTime">00:00:00</h1>
+    <div class="buttons">
+
+    </div>
+    
+    <img src="stop.png" onclick="watchstop()">
+    <img src="start.png" onclick="watchstart()">
+    <img src="reset.png" onclick="watchreset()">
+
+  </div>
+</div>
+<script>
+let [seconds,minutes, hours]=[0,0,0];
+let displayTime=document.getElementById("displayTime");
+let timer=null;
+function stopwatch()
+{
+    seconds++;
+    if(seconds==60){
+        seconds=0;
+        minutes++;
+        if(minutes==60){
+            minutes=0;
+            hours++;
+
+        }
+    }
+    displayTime.innerHTML=hours+":"+minutes+":"+seconds;
+} 
+function watchstart(){
+    if(timer!==null){
+        clearInterval(timer);
+    }
+   timer= setInterval(stopwatch,1000);
+
+}
+function watchstop(){
+    clearInterval(timer);
+}
+function watchreset(){
+    clearInterval(timer);
+    [seconds,minutes, hours]=[0,0,0];
+    displayTime.innerHTML="00:00:00";
+}
+
+</script>
+</body>
+</html>

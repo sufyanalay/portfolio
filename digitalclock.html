@@ -1,0 +1,52 @@
+<html>
+<head>
+</head>
+<title>
+PORTFOLIO_WEBSITE
+</title>
+<link rel="stylesheet" href="assignment11.css">
+<body>
+<div class="container">
+   <div class="sidebar">
+      <nav>
+         <ul>
+           <li><a href="/HOME.html"target=-blank> HOME</a></li>
+           <li> <a href="digitalclock.html"target=-blank>DIGITAL CLOCK</a></li>
+           <li><a href="colorgenerator.html"target=-blank>RANDOM COLOR GENERATOR</a></li>
+           <li> <a href="stopwatch.html"target=-blank>STOP WATCH</a></li>
+           <li><a href="blog.htmml"target=-blank>BLOG</a> </li>
+           <li> <a href="contact.html"target=-blank>CONTACT</a></li>
+           <li><a href="https://coursecs.wordpress.com"target=-blank>INSTA</a> </li>
+         </ul>
+     </nav>
+   </div>
+   <div class="hero">
+    <div class="digit">
+        <div class="clock">
+           <span id="hrs">00</span>
+           <span > :</span>
+           <span id="min" >00</span>
+           <span > :</span>
+           <span id="sec" >00</span>
+        </div>
+        
+    </div>
+   </div>
+</div>
+<script>
+     let hrs=document.getElementById("hrs");
+    let min=document.getElementById("min");
+    let sec=document.getElementById("sec");
+
+    setInterval(()=>{let currentTime= new Date();
+
+hrs.innerHTML= currentTime.getHours();
+min.innerHTML= currentTime.getMinutes();
+sec.innerHTML= currentTime.getSeconds();
+},1000 )
+    
+
+
+</script>
+</body>
+</html>

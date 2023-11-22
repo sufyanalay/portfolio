@@ -1,0 +1,53 @@
+<html>
+<head>
+</head>
+<title>
+PORTFOLIO_WEBSITE
+</title>
+<link rel="stylesheet" href="assignment11.css">
+<body>
+<div class="container"></div>
+   <div class="sidebar">
+      <nav>
+         <ul>
+           <li><a href="/HOME.html"target=-blank> HOME</a></li>
+           <li> <a href="digitalclock.html"target=-blank>DIGITAL CLOCK</a></li>
+           <li><a href="colorgenerator.html"target=-blank>RANDOM COLOR GENERATOR</a></li>
+           <li> <a href="stopwatch.html"target=-blank>STOP WATCH</a></li>
+           <li><a href="blog.htmml"target=-blank>BLOG</a> </li>
+           <li> <a href="contact.html"target=-blank>CONTACT</a></li>
+           <li><a href="https://coursecs.wordpress.com"target=-blank>INSTA</a> </li>
+         </ul>
+     </nav>
+   </div>
+   <div class="colorgenerator">
+    <div id="colorDisplay">Click the button to generate a random color!</div>
+    <button id="generateButton">Generate Color</button>
+  
+    <script>
+      const colorDisplay = document.getElementById('colorDisplay');
+      const generateButton = document.getElementById('generateButton');
+  
+      // Function to generate a random color
+      const generateRandomColor = () => {
+        const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+        return randomColor;
+      };
+  
+      // Function to update the display with a random color
+      const updateColorDisplay = () => {
+        const randomColor = generateRandomColor();
+        colorDisplay.textContent = randomColor;
+        colorDisplay.style.color = randomColor;
+      };
+  
+      // Event listener for the button click
+      generateButton.addEventListener('click', updateColorDisplay);
+  
+      // Initial display of a random color
+      updateColorDisplay();
+    </script>
+ </div> 
+ </div>  
+</body>
+</html>

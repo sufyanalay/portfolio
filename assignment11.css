@@ -1,0 +1,161 @@
+*{
+	margin: opx;
+	padding: 0px;
+}
+.sidebar{
+	
+	width: 12vw;
+	height: 100vh;
+
+}
+.sidebar nav{
+	padding: 40px;
+	background-color: rgb(204, 192, 176);
+}
+.sidebar nav li{
+ list-style:none ;
+ font-size: 15px;
+ font-weight: bold;
+ padding: 30px 0px;
+ cursor:pointer;
+}
+.sidebar nav li a{
+	text-decoration: none;
+}
+.sidebar nav li a:hover{
+	color:rgb(255, 255, 255);
+}
+.main{
+	
+	width: 90vw;
+	height: 100vh;
+}
+.infocontainer{
+
+	height: 78vh;
+	width: 80vw;
+	margin: 70px auto;
+	display: flex;
+	justify-content: space-around;
+}
+.divinfo{
+    display: flex;
+	flex-direction: column;
+	justify-content:center;
+}
+.hello{
+font-size: 85px;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.name{
+font-size: 50px;
+font-weight: bold;
+color: brown;
+}
+.about{
+font-size: 40px;
+}
+.work{
+	font-size: 40px;
+	color: rgb(198, 32, 63);
+}
+.buttons button{
+height: 50px;
+background-color: rgb(115, 86, 86);
+font-size: 20px;
+margin-top: 30px;
+padding: 15px;
+margin: 25px;
+font-weight: bold;
+border-radius:8%;
+cursor: pointer;
+}
+.buttons button:hover{
+	background-color: chocolate;
+	color: floralwhite;
+}
+.divpic img{
+	width: 370px;
+	
+}
+.container{
+	display: flex;
+}
+.digit{
+	width: 800px;
+	height: 180px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: brown;
+}
+.clock{
+	width: 100%;
+	height: 100%;
+	background-color: bisque;
+	border-radius: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3.5em;
+}
+.clock span::after{
+	content: '';
+font-size: 16px;
+position: absolute;
+bottom: -5px;
+left: 50%;
+transform: translate(-50%);
+}
+.clock span{
+font-size: 80px;
+width: 110px;
+display: inline-block;
+text-align: center;
+position: relative;
+
+}
+#hrs::after{
+	content:'HOURS';
+}
+#min::after{
+	content:'MIN';
+}
+#sec::after{
+	content:'SEC';
+}
+.colorgenerator body{
+	background-color: aqua;
+}
+  #colorDisplay {
+	font-size: 36px;
+	margin-bottom: 20px;
+	margin-top: 50px;
+	margin-left: 200px;
+
+  }
+  #generateButton {
+	font-size: 16px;
+	cursor: pointer;
+	margin-left: 200px;
+	border-radius: 5px;
+	background-color: #3498db;
+	color: white;
+	border: none;
+  }
+  .stopwatch{
+	width: 90%;
+	max-width: 600px;
+	margin: 150px;
+
+  }
+  .stopwatch h1{
+	padding: 10px;
+	
+  }
+  .stopwatch img{
+	width: 40px;
+	
+	
+  }
