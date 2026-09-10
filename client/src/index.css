@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+  --primary: #FF7A00;
+  --secondary: #1E9EBA;
+  --text-dark: #1E2533;
+  --text-gray: #64748B;
+  --border: #E5E9F0;
+  --radius-card: 20px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-text-dark: var(--text-dark);
+  --color-text-gray: var(--text-gray);
+  --color-border: var(--border);
+  --radius-card: var(--radius-card);
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-dark);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+@media (min-width: 1024px) {
+  .desktop-shell {
+    min-height: 100vh;
+  }
+
+  .desktop-track {
+    display: block;
+  }
+
+  .desktop-panel {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .desktop-panel > .mx-auto {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
