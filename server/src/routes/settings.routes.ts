@@ -1,15 +1,10 @@
-import { Router } from "express";
-import {
-  getSettings,
-  updateSettings,
-} from "../controllers/settings.controller";
+import express from "express";
+import { getSettings, updateSettings } from "../controllers/settings.controller";
+import { protect } from "../middleware/auth.middleware";
 
-const router = Router();
+const router = express.Router();
 
-// GET settings
 router.get("/", getSettings);
-
-// UPDATE settings
-router.put("/", updateSettings);
+router.put("/", protect, updateSettings);
 
 export default router;
