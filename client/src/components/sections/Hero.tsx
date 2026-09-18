@@ -108,7 +108,7 @@ export default function Hero() {
           <div className="absolute bottom-0 right-1/2 h-[260px] w-[260px] translate-x-1/2 rounded-full bg-secondary/15 blur-[80px] md:right-10 md:h-[420px] md:w-[420px] md:translate-x-0 md:blur-[100px]" />
 
           {/* Profile Image */}
-          <div className="relative mx-auto mb-0 h-[320px] w-full max-w-[260px] sm:h-[380px] sm:max-w-[300px] md:h-[650px] md:max-w-[500px] md:translate-y-3">
+         <div className="relative mx-auto mb-0 h-[320px] w-full max-w-[260px] sm:h-[380px] sm:max-w-[300px] md:h-[650px] md:max-w-[500px]">
             <img
               src={profileImage}
               alt="Sufyan Ali"
