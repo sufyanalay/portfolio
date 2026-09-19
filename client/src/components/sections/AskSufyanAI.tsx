@@ -91,17 +91,17 @@ export default function AskSufyanAI() {
 
   return (
     <>
-      <button
-        type="button"
-        aria-label={isOpen ? "Close Ask Sufyan AI" : "Open Ask Sufyan AI"}
-        aria-expanded={isOpen}
-        onClick={() => setIsOpen((current) => !current)}
-        className="fixed right-5 top-1/2 z-40 flex h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-white shadow-lg transition hover:scale-105 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:right-8"
-      >
-        <span aria-hidden="true" className="relative block h-6 w-7 rounded-md border-2 border-current">
-          <span className="absolute -bottom-1 left-1 h-2 w-2 rotate-45 border-b-2 border-l-2 border-current bg-primary" />
-        </span>
-      </button>
+  <button
+  type="button"
+  aria-label={isOpen ? "Close Ask Sufyan AI" : "Open Ask Sufyan AI"}
+  aria-expanded={isOpen}
+  onClick={() => setIsOpen((current) => !current)}
+  className="fixed bottom-45 right-3 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lg transition hover:scale-105 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:right-6"
+>
+  <span aria-hidden="true" className="relative block h-6 w-7 rounded-md border-2 border-current">
+    <span className="absolute -bottom-1 left-1 h-2 w-2 rotate-45 border-b-2 border-l-2 border-current bg-primary" />
+  </span>
+</button>
 
       {isOpen && (
         <aside className="fixed inset-y-4 right-4 z-50 flex w-[min(420px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl bg-slate-900 p-4 text-white shadow-2xl md:inset-y-6 md:right-8">
