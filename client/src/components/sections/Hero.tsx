@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import api from "../../lib/api";
+import { a } from "framer-motion/client";
 
 const STACK_BADGES = [
   {
@@ -29,19 +30,18 @@ const STACK_BADGES = [
   },
 ];
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: {
     opacity: 0,
     y: 16,
   },
-
   show: (delay: number) => ({
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.6,
       delay,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   }),
 };
@@ -73,11 +73,8 @@ export default function Hero() {
       {/* Background */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#FDF0E6] via-background to-[#E8F1FA]" />
-
         <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-primary/10 blur-[100px]" />
-
         <div className="absolute right-0 top-1/3 h-96 w-96 rounded-full bg-secondary/10 blur-[120px]" />
-
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -104,7 +101,6 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
             </span>
-
             Available for work · Lahore, Pakistan
           </motion.span>
 
@@ -116,7 +112,7 @@ export default function Hero() {
             custom={0.05}
             className="mb-2 text-[12px] tracking-[0.15em] text-text-gray"
           >
-            HELLO, I&apos;M
+            HELLO, I'M
           </motion.p>
 
           {/* Name */}
@@ -177,28 +173,25 @@ export default function Hero() {
             custom={0.3}
             className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start"
           >
-            {/* View Work */}
-            <a
+            
               href="#work"
               className="group relative overflow-hidden rounded-full bg-primary px-6 py-3 text-sm font-medium text-white shadow-md shadow-primary/20 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30"
-            >
+            <a>
               View My Work
             </a>
 
-            {/* Resume */}
-            <a
+            
               href={resumeUrl}
               download
               className="rounded-full border border-border bg-white px-6 py-3 text-sm font-medium text-text-dark shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
-            >
+            <a>
               Download Resume
             </a>
 
-            {/* Hire Me */}
-            <a
+            
               href="#contact"
               className="rounded-full border border-border bg-transparent px-6 py-3 text-sm font-medium text-text-dark transition-all hover:-translate-y-0.5 hover:bg-white hover:shadow-sm"
-            >
+            <a>
               Hire Me
             </a>
           </motion.div>
@@ -238,13 +231,8 @@ export default function Hero() {
           }}
           className="relative order-2 flex w-full flex-1 items-end justify-center pb-0 pt-6 md:order-2 md:justify-end md:py-0"
         >
-          {/* Glow */}
           <div className="absolute bottom-0 right-1/2 h-[260px] w-[260px] translate-x-1/2 rounded-full bg-secondary/15 blur-[80px] md:right-10 md:h-[420px] md:w-[420px] md:translate-x-0 md:blur-[100px]" />
-
-          {/* Glass Background */}
           <div className="absolute bottom-0 right-1/2 hidden h-[85%] w-[85%] translate-x-1/2 rounded-[32px] border border-white/60 bg-white/30 backdrop-blur-sm md:right-6 md:block md:translate-x-0" />
-
-          {/* Profile Image */}
           <div className="relative mx-auto mb-0 h-[320px] w-full max-w-[260px] drop-shadow-2xl sm:h-[380px] sm:max-w-[300px] md:h-[650px] md:max-w-[500px]">
             <img
               src={profileImage}
@@ -275,7 +263,6 @@ export default function Hero() {
           className="flex flex-col items-center gap-1.5 text-text-gray transition-colors hover:text-primary"
         >
           <span className="text-[10px] tracking-[0.15em]">SCROLL</span>
-
           <span className="h-8 w-[1px] animate-pulse bg-current" />
         </a>
       </motion.div>
