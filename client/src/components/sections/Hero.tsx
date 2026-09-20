@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import api from "../../lib/api";
-import { a } from "framer-motion/client";
 
 const STACK_BADGES = [
   {
